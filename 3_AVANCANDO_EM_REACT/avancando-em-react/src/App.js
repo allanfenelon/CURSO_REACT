@@ -1,9 +1,11 @@
 // COMPONENTS
 import ManageData from './components/ManageData';
 import ListRender from './components/ListRender';
+import ConditionalRender from './components/ConditionalRender';
 // Assests / CSS
 import './App.css';
 import City from './assets/city.jpg' 
+
 
 
 
@@ -22,6 +24,7 @@ function App() {
 
         <ManageData />
         <ListRender />
+        <ConditionalRender />
     </div>
   );
 }
