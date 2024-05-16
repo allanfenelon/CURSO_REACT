@@ -1,8 +1,10 @@
 // COMPONENTS
 import ManageData from './components/ManageData';
+import ListRender from './components/ListRender';
 // Assests / CSS
 import './App.css';
 import City from './assets/city.jpg' 
+
 
 
 
@@ -19,6 +21,7 @@ function App() {
         </div>
 
         <ManageData />
+        <ListRender />
     </div>
   );
 }

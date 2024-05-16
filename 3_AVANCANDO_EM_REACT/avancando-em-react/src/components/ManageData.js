@@ -9,7 +9,7 @@ const ManageData = () => {
     <div>
       <div>
         <p>Valor: {someData}</p>
-        <button onCLick={() => {someData = 15}}>Mudar variável</button>
+        <button onClick={() => {someData = 15}}>Mudar variável</button>
       </div>
       <div>
         <p>Valor: {number}</p>
