@@ -4,6 +4,7 @@ import './App.css';
 import { useState } from 'react';
 // COMPONENTS
 import MyComponent from './components/MyComponent';
+import Title from './components/Title';
 
 
 function App() {
@@ -28,6 +29,8 @@ function App() {
       <h2 className={redTitle ? 'red-title' : 'title'}>Esse título vai ter classe dinâmica</h2>
       <button onClick={() => setRedTitle(false)}>desativar modo do título vermelho</button>
       <button onClick={() => setRedTitle(true)}>ativar modo do título vermelho</button>
+      {/* CSS MODULES */}
+      <Title />
     </div>
   );
 }
