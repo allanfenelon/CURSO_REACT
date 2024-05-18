@@ -8,6 +8,7 @@ import MyComponent from './components/MyComponent';
 
 function App() {
   const [valor, setValor] = useState(true)
+  const [redTitle, setRedTitle]= useState(true)
   return (
     <div className="App">
       {/* CSS GLOBAL */}
@@ -23,6 +24,10 @@ function App() {
       <h2 style={valor ? ({color:'red'}):({color:'blue'})}>CSS DINÂMICO</h2>
       <button onClick={()=> setValor(false)}>Falso</button>
       <button onClick={()=> setValor(true)}>Verdadeiro</button>
+      {/* CLASSE DINÂMICA */}
+      <h2 className={redTitle ? 'red-title' : 'title'}>Esse título vai ter classe dinâmica</h2>
+      <button onClick={() => setRedTitle(false)}>desativar modo do título vermelho</button>
+      <button onClick={() => setRedTitle(true)}>ativar modo do título vermelho</button>
     </div>
   );
 }
