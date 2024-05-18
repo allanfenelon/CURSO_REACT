@@ -1,8 +1,13 @@
+// STYLES
 import './App.css';
+// HOOKS
+import { useState } from 'react';
 // COMPONENTS
 import MyComponent from './components/MyComponent';
 
+
 function App() {
+  const [valor, setValor] = useState(true)
   return (
     <div className="App">
       {/* CSS GLOBAL */}
@@ -14,6 +19,10 @@ function App() {
       <p style={{color:'blue', padding: '25px', borderTop: '2px solid red'}}>
         Este elemento foi estilizado em modo inline
       </p>
+      {/* CSS INLINE DINÂMICO*/}
+      <h2 style={valor ? ({color:'red'}):({color:'blue'})}>CSS DINÂMICO</h2>
+      <button onClick={()=> setValor(false)}>Falso</button>
+      <button onClick={()=> setValor(true)}>Verdadeiro</button>
     </div>
   );
 }
