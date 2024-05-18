@@ -6,6 +6,7 @@ import ShowUserName from './components/ShowUserName';
 import CarDetails from './components/CarDetails';
 import Fragment from './components/Fragment';
 import Container from './components/Container';
+import ExecuteFunction from './components/ExecuteFunction';
 // Assests / CSS
 import './App.css';
 import City from './assets/city.jpg' 
@@ -13,9 +14,12 @@ import { useState } from 'react';
 
 
 
+
 function App() {
   const [userName] = useState('Maria') 
-
+  function showMessage(){
+    console.log('Evento do componente pai')
+  }
   const cars = [
     {id: 1, brand:'BMW', km:0, color:'Preto',newCar: true},
     {id: 2, brand:'VW', km:0, color:'Vermelho',newCar: true},
@@ -47,7 +51,7 @@ function App() {
 
         <h1>Loop de renderização</h1>
         {cars.map((carros) => (
-          <CarDetails 
+          <CarDetails key={carros.id}
           brand={carros.brand} km={carros.km} color={carros.color} newCar={carros.newCar}
           />
         ))}
@@ -58,6 +62,9 @@ function App() {
         <Container myValue='Opa rapaz'>
           <p>E esse é o conteúdo</p>
         </Container>
+
+        {/* EXECUTAR FUNÇÃO  */}
+        <ExecuteFunction myFuction={showMessage}/>
     </div>
   );
 }
