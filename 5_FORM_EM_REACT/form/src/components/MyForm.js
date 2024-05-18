@@ -9,9 +9,8 @@ const MyForm = () => {
     const handleName = (e) => {
         setName(e.target.value)
     }
-    const handleEmail = (e) => {
-        setEmail(e.target.value)
-    }
+    console.log(name)
+    console.log(email)
   return (
     <div className={styles.div_formulario}>
         {/* 1- CRIAÇÃO DO FORM */}
@@ -23,7 +22,7 @@ const MyForm = () => {
             {/* 2 - LABEL ENVOLVENDO O INPUT */}
             <label>
                 <span>E-mail</span>
-                <input type="email" name='email' placeholder='Digite o e-mail' onChange={handleEmail} />
+                <input type="email" name='email' placeholder='Digite o e-mail' onChange={(e) => setEmail(e.target.value)} />
             </label>
             <input type="submit" value='Enviar' />
         </form>
