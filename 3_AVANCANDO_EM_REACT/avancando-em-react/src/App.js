@@ -7,10 +7,14 @@ import CarDetails from './components/CarDetails';
 import Fragment from './components/Fragment';
 import Container from './components/Container';
 import ExecuteFunction from './components/ExecuteFunction';
+import Message from './components/Message';
+import ChangeMessageState from './components/ChangeMessageState';
 // Assests / CSS
 import './App.css';
 import City from './assets/city.jpg' 
 import { useState } from 'react';
+
+
 
 
 
@@ -26,6 +30,12 @@ function App() {
     {id: 3, brand:'BMW', km:235600, color:'Preto',newCar: false},
     {id: 4, brand:'Honda', km:0, color:'Cinza',newCar: true},
   ]
+
+  const [message, setMessage] = useState("")
+
+  const handleMessage = (msg) => {
+    setMessage(msg)
+  }
   return (
     <div className="App">
       <div>
@@ -65,6 +75,10 @@ function App() {
 
         {/* EXECUTAR FUNÇÃO  */}
         <ExecuteFunction myFuction={showMessage}/>
+
+        {/* STATE LIFT  */}
+        <Message msg={message}/>
+        <ChangeMessageState handleMessage={handleMessage}/>
     </div>
   );
 }
