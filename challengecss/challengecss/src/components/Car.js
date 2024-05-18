@@ -1,6 +1,6 @@
 import styles from './Car.module.css';
 
-const Car = ({key, name, km, color}) => {
+const Car = ({key, name, km, color, removeCar}) => {
   return (
     <div className={styles.card}>
         <h1>Nome: {name}</h1>

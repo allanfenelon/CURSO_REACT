@@ -2,6 +2,7 @@
 import './App.css';
 import Car from './components/Car';
 
+
 function App() {
   const cars = [
     {id:1, name:'Fusca', km:'7896255', color:'Branco'},
@@ -9,6 +10,10 @@ function App() {
     {id:3, name:'Polo', km:'0', color:'Cinza'},
     {id:4, name:'Gol', km:'12560', color:'Vermelho'},
   ]
+
+  
+  
+  
   return (
     <div className="App">
       <h1 className='title-App'>Lista de carros</h1>
