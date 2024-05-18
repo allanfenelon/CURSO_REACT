@@ -4,14 +4,11 @@ import ListRender from './components/ListRender';
 import ConditionalRender from './components/ConditionalRender';
 import ShowUserName from './components/ShowUserName';
 import CarDetails from './components/CarDetails';
+import Fragment from './components/Fragment';
 // Assests / CSS
 import './App.css';
 import City from './assets/city.jpg' 
 import { useState } from 'react';
-
-
-
-
 
 
 
@@ -53,8 +50,8 @@ function App() {
           brand={carros.brand} km={carros.km} color={carros.color} newCar={carros.newCar}
           />
         ))}
-        
-
+        {/* FRAGMENT */}
+        <Fragment propFragment='Teste'/>
     </div>
   );
 }
