@@ -17,6 +17,13 @@ import { useState } from 'react';
 
 function App() {
   const [userName] = useState('Maria') 
+
+  const cars = [
+    {id: 1, brand:'BMW', km:0, color:'Preto',newCar: true},
+    {id: 2, brand:'VW', km:0, color:'Vermelho',newCar: true},
+    {id: 3, brand:'BMW', km:235600, color:'Preto',newCar: false},
+    {id: 4, brand:'Honda', km:0, color:'Cinza',newCar: true},
+  ]
   return (
     <div className="App">
       <div>
@@ -34,7 +41,19 @@ function App() {
         {/* PROPS */}
         <ShowUserName name={userName} />
         {/* destructuring */}
-        <CarDetails brand='BMW' km={1500} color='Preto' />
+        <CarDetails brand='BMW' km={1500} color='Preto' newCar={false}/>
+        {/* REAPROVEITAMENTO */}
+        <CarDetails brand='VW' km={0} color='Branco' newCar={true}/>
+        <CarDetails brand='Honda' km={0} color='Vermelho' newCar={true}/>
+        <CarDetails brand='VW' km={20000} color='Preto' newCar={false}/>
+
+        <h1>Loop de renderização</h1>
+        {cars.map((carros) => (
+          <CarDetails 
+          brand={carros.brand} km={carros.km} color={carros.color} newCar={carros.newCar}
+          />
+        ))}
+        
 
     </div>
   );
