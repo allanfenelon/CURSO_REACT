@@ -9,6 +9,8 @@ function App() {
     {id:2, name:'Onix', km:'0', color:'Preto'},
     {id:3, name:'Polo', km:'0', color:'Cinza'},
     {id:4, name:'Gol', km:'12560', color:'Vermelho'},
+    {id:5, name:'Ferrari', km:'0', color:'Vermelho'},
+    {id:6, name:'Lamborguini', km:'0', color:'Preto'},
   ]
 
   

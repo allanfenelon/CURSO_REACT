@@ -4,3 +4,10 @@
     padding: 10px 50px;
     margin: 10px;
 }
+
+.car_new{
+    color:green;
+}
+.car_used{
+    color: red;
+}
