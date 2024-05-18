@@ -5,6 +5,7 @@ import ConditionalRender from './components/ConditionalRender';
 import ShowUserName from './components/ShowUserName';
 import CarDetails from './components/CarDetails';
 import Fragment from './components/Fragment';
+import Container from './components/Container';
 // Assests / CSS
 import './App.css';
 import City from './assets/city.jpg' 
@@ -52,6 +53,11 @@ function App() {
         ))}
         {/* FRAGMENT */}
         <Fragment propFragment='Teste'/>
+
+        {/* PROP CHILD  */}
+        <Container myValue='Opa rapaz'>
+          <p>E esse é o conteúdo</p>
+        </Container>
     </div>
   );
 }
