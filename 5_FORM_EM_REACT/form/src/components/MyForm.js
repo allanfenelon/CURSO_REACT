@@ -18,6 +18,11 @@ const MyForm = ({user}) => {
         event.preventDefault(); // não faz o formulario recarregar a página
         console.log('Enviando dados...')
         console.log(name,email)
+
+        // validação, envio e etc
+        // 7 - Limpando formulários após envio
+        setName('')
+        setEmail('')
     }
   return (
     <div className={styles.div_formulario} onSubmit={handleSubmit}>
