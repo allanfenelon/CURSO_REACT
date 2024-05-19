@@ -6,6 +6,7 @@ const MyForm = ({user}) => {
     // 3 - GERENCIAMENTO DE DADOS
     const [name, setName] = useState(user ? user.name : '')
     const [email, setEmail] = useState(user ? user.email : '')
+    const [bio, setBio] = useState(user ? user.bio : '')
 
     const handleName = (e) => {
         setName(e.target.value)
@@ -23,6 +24,7 @@ const MyForm = ({user}) => {
         // 7 - Limpando formulários após envio
         setName('')
         setEmail('')
+        setBio('')
     }
   return (
     <div className={styles.div_formulario} onSubmit={handleSubmit}>
@@ -38,6 +40,11 @@ const MyForm = ({user}) => {
                 <span>E-mail</span>
                 {/* 4- SIMPLIFICAÇÃO DE MANIPUTALÃO DE STATE */}
                 <input type="email" name='email' placeholder='Digite o e-mail' onChange={(e) => setEmail(e.target.value)} value={email}/>
+            </label>
+            {/* TEXTAREA */}
+            <label>
+                <span>Bio:</span>
+                <textarea name="bio" placeholder='Descrição pessoal' onChange={(e) => setBio(e.target.value)} value={bio}></textarea>
             </label>
             <input type="submit" value='Enviar' />
         </form>
